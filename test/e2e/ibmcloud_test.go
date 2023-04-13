@@ -21,6 +21,12 @@ func TestCreateSimplePod(t *testing.T) {
 	}
 	doTestCreateSimplePod(t, assert)
 }
+func TestCreatePodWithEnvVariables(t *testing.T) {
+	assert := IBMCloudAssert{
+		vpc: pv.IBMCloudProps.VPC,
+	}
+	doTestCreatePodWithEnvVariables(t, assert)
+}
 
 // IBMCloudAssert implements the CloudAssert interface for ibmcloud.
 type IBMCloudAssert struct {
